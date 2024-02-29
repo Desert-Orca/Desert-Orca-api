@@ -17,7 +17,7 @@ body {
   grid-template-rows: 5rem 1fr 5rem;
   height: 100%;
 }
-.header {
+header {
   grid-area: header;
   background-color: #203040;
   color: #ffffff;
@@ -40,10 +40,10 @@ body {
 .header-links a:hover {
   color: #ff8000;
 }
-.main {
+main {
   grid-area: main;
 }
-.footer {
+footer {
   grid-area: footer;
   background-color: #203040;
   color: #ffffff;
