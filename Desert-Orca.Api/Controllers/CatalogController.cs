@@ -1,22 +1,31 @@
 using Microsoft.AspNetCore.Mvc;
 using Desert.Orca.Domain.Catalog;
 using Desert.Orca.Domain.Catalog.Rat;
+using Desert.Orca.Data;
 
-namespace Jet.Piranha.Api.Controllers
+namespace Desert.Orca.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
     public class CatalogController: ControllerBase
     {
+
+        private readonly StoreContext _db;
+
+        public CatalogController(StoreContext db)
+        {
+            _db = db;
+        }
+
         [HttpGet]
         public IActionResult GetItems()
         {
-            var items = new List<Item>()
+            /*var items = new List<Item>()
             {
                 new Item("Shirt", "Ohio State shirt.", "Nike", 29.99m),
                 new Item("Shorts", "Ohio State shorts.", "Nike", 44.99m)
-            };
-            return Ok(items);
+            };*/
+            return Ok(_db.Items);
         }
 
         [HttpGet("{id:int}")]
