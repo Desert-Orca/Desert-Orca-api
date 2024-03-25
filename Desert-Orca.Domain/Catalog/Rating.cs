@@ -17,8 +17,8 @@ public class Rating
             throw new ArgumentException("UserName cannot be null.");
         }
         
-        this. Stars = stars;
-        this. UserName = userName;
+        this.Stars = stars;
+        this.UserName = userName;
         this.Review = review;
     }
 }

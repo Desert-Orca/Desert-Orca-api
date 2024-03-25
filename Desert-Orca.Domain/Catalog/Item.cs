@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Emerald.Tiger.Domain.Catalog;
 
 namespace Jet.Piranha.Domain.Catalog 
@@ -11,6 +12,11 @@ namespace Jet.Piranha.Domain.Catalog
         public string Brand { get; set; }
         public decimal Price { get; set; }
         public List<Rating> Ratings {get;set;} = new List<Rating>();
+
+        public void AddRating(Rating rating)
+        {
+            this.Ratings.Add(rating);
+        }
 
         public Item(string name, string description, string brand, decimal price)
         {
