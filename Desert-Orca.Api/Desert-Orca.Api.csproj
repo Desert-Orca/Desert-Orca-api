@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Desert-Orca.Domain\Desert-Orca.Domain.csproj" />
+    <ProjectReference Include="..\Desert-Orca.Data\Desert-Orca.Data.csproj" />
   </ItemGroup>
 
 </Project>

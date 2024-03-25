@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desert-Orca.Api", "Desert-O
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desert-Orca.Domain", "Desert-Orca.Domain\Desert-Orca.Domain.csproj", "{118EBDBE-E542-4B68-A083-96CDA4E4D298}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desert-Orca.Data", "Desert-Orca.Data\Desert-Orca.Data.csproj", "{F40773C3-C7CD-4C6C-8A10-47F2BF29FECA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{118EBDBE-E542-4B68-A083-96CDA4E4D298}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{118EBDBE-E542-4B68-A083-96CDA4E4D298}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{118EBDBE-E542-4B68-A083-96CDA4E4D298}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F40773C3-C7CD-4C6C-8A10-47F2BF29FECA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F40773C3-C7CD-4C6C-8A10-47F2BF29FECA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F40773C3-C7CD-4C6C-8A10-47F2BF29FECA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F40773C3-C7CD-4C6C-8A10-47F2BF29FECA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
