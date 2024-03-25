@@ -1,4 +1,4 @@
-namespace Emerald.Tiger.Domain.Catalog;
+namespace Desert.Orca.Domain.Catalog.Rat;
 public class Rating
 {
     public int Stars { get; set; }

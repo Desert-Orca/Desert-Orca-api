@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using Emerald.Tiger.Domain.Catalog;
+using Desert.Orca.Domain.Catalog.Rat;
 
-namespace Jet.Piranha.Domain.Catalog 
+namespace Desert.Orca.Domain.Catalog 
 {
     public class Item
     {
