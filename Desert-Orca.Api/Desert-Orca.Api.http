@@ -1,5 +1,18 @@
 @Desert_Orca.Api_HostAddress = http://localhost:5165
 
+GET https://localhost:7250/catalog
+
+GET http://localhost:5299/catalog
+
+POST https://localhost:7250/catalog
+Content-Type: applications/json
+{
+    "name": "Shoes",
+    "description": "Ohio State shoes",
+    "brand": "Nike",
+    "price": 129.99
+}
+
 GET {{Desert_Orca.Api_HostAddress}}/weatherforecast/
 Accept: application/json
 
