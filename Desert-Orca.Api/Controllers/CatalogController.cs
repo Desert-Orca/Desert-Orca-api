@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Desert.Orca.Domain.Catalog;
 using Desert.Orca.Domain.Catalog.Rat;
 using Desert.Orca.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace Desert.Orca.Api.Controllers
 {
@@ -58,13 +59,26 @@ namespace Desert.Orca.Api.Controllers
             }
             item.AddRating(rating);
             _db.SaveChanges();
-            
+
             return Ok(item);
         }
         
         [HttpPut("{id:int}")]
-        public IActionResult Put(int id, Item item)
+        public IActionResult PutItem(int id, [FromBody] Item item)
         {
+            if (id != item.Id)
+            {
+                return BadRequest();
+            }
+
+            if (_db.Items.Find(id) == null)
+            {
+                return NotFound();
+            }
+
+            _db.Entry(item).State = EntityState.Modified;
+            _db.SaveChanges();
+
             return NoContent();
         }
 
