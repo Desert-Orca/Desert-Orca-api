@@ -1,5 +1,7 @@
 ﻿using Desert.Orca.Data.Db;
 using Desert.Orca.Domain.Catalog;
+using Desert.Orca.Domain.Orders;
+using Desert.Orca.Domain.Orders.Item;
 using Microsoft.EntityFrameworkCore;
 
 namespace Desert.Orca.Data
@@ -10,6 +12,8 @@ namespace Desert.Orca.Data
             : base(options)
         { }
         public DbSet<Item> Items { get; set; }
+
+        public DbSet<Orders> Orders { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
