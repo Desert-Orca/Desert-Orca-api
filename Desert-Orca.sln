@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desert-Orca.Domain", "Deser
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desert-Orca.Data", "Desert-Orca.Data\Desert-Orca.Data.csproj", "{F40773C3-C7CD-4C6C-8A10-47F2BF29FECA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Desert-Orca.Tests", "Desert-Orca.Tests", "{E8DEE1A7-F1C2-4AC6-A135-B2A0E31AD348}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desert_Orca.Domain.Tests", "Desert-Orca.Tests\Desert_Orca.Domain.Tests\Desert_Orca.Domain.Tests.csproj", "{1B7B3CF2-568A-4B61-897F-E3909B682370}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +34,12 @@ Global
 		{F40773C3-C7CD-4C6C-8A10-47F2BF29FECA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F40773C3-C7CD-4C6C-8A10-47F2BF29FECA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F40773C3-C7CD-4C6C-8A10-47F2BF29FECA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B7B3CF2-568A-4B61-897F-E3909B682370}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B7B3CF2-568A-4B61-897F-E3909B682370}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B7B3CF2-568A-4B61-897F-E3909B682370}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B7B3CF2-568A-4B61-897F-E3909B682370}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1B7B3CF2-568A-4B61-897F-E3909B682370} = {E8DEE1A7-F1C2-4AC6-A135-B2A0E31AD348}
 	EndGlobalSection
 EndGlobal
