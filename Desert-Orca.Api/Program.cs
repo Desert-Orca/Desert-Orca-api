@@ -6,13 +6,22 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
-builder.Services.AddDbContext<StoreContext>(options => options.UseSqlite("Data Source=../Registrar.sqlite", b => b.MigrationsAssembly("Desert-Orca.Api")));
+builder.Services.AddDbContext<StoreContext>(options => options.UseSqlServer("Server=tcp:desert-orca-sql.database.windows.net,1433;Initial Catalog=Desert-Orca-Sql-db;Persist Security Info=False;User ID=DesertOrca;Password=Duyrhajafn9FWMp;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;", b => b.MigrationsAssembly("Desert-Orca.Api")));
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+string authority =  builder.Configuration["Auth0:Authority"] ??
+    throw new ArgumentNullException("Auth0:Authority");
+
+string audience = builder.Configuration["Auth0:Audience"] ??
+    throw new ArgumentNullException("Autho0:Audience");
+
+string storeConnectionString = builder.Configuration.GetConnectionString("StoreConnection") ??
+    throw new ArgumentNullException("ConnectionString:StoreConnection");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
